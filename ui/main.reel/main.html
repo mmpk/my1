@@ -2,21 +2,314 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Main</title>
-
+    <title>
+        Main
+    </title>
     <link rel="stylesheet" href="main.css">
-
     <script type="text/montage-serialization">
-        {
-            "owner": {
-                "properties": {
-                    "element": {"#": "main"}
-                }
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"}
+            }
+        },
+        "checkbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked": true
+            }
+        },
+        "f_length": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "f_length"},
+                "value": "1"
+            }
+        },
+        "flow": {
+            "prototype": "montage/ui/flow.reel",
+            "properties": {
+                "element": {"#": "flow"},
+                "cameraFov": 50,
+                "cameraPosition": [
+                    -26.448,
+                    -266.46674762649354,
+                    2579.949105207698
+                ],
+                "cameraTargetPoint": [
+                    -13.999867219917085,
+                    -107.12503900301272,
+                    1135.5491269690406
+                ],
+                "contentController": {"@": "rangeController"},
+                "flowEditorMetadata": {
+                    "flowEditorVersion": 0.1,
+                    "shapes": [
+                        {
+                            "type": "FlowSpline",
+                            "name": "Spline 3",
+                            "pathIndex": 0,
+                            "id": 176
+                        }
+                    ]
+                },
+                "hasSelectedIndexScrolling": false,
+                "isSelectionEnabled": true,
+                "linearScrollingVector": [
+                    -300,
+                    0
+                ],
+                "paths": [
+                    {
+                        "knots": [
+                            {
+                                "previousHandlerPosition": [],
+                                "nextDensity": 2,
+                                "previousDensity": 2,
+                                "knotPosition": [
+                                    -13.207498127268536,
+                                    0,
+                                    -946.4048698267896
+                                ],
+                                "rotateX": 0,
+                                "rotateY": 0,
+                                "rotateZ": 0,
+                                "opacity": 1,
+                                "nextHandlerPosition": [
+                                    -13.207498127268536,
+                                    0,
+                                    -946.4048698267896
+                                ]
+                            },
+                            {
+                                "knotPosition": [
+                                    -1706.2122574873642,
+                                    0,
+                                    -26.747963507725444
+                                ],
+                                "nextHandlerPosition": [
+                                    -1706.2122574873642,
+                                    0,
+                                    -26.747963507725444
+                                ],
+                                "previousHandlerPosition": [
+                                    -1706.2122574873642,
+                                    0,
+                                    -26.747963507725444
+                                ],
+                                "nextDensity": 2,
+                                "previousDensity": 2,
+                                "rotateX": 0,
+                                "rotateY": 0,
+                                "rotateZ": 0,
+                                "opacity": 1
+                            },
+                            {
+                                "knotPosition": [
+                                    -23.658144789985272,
+                                    0,
+                                    976.5141161130721
+                                ],
+                                "nextHandlerPosition": [
+                                    -23.658144789985272,
+                                    0,
+                                    976.5141161130721
+                                ],
+                                "previousHandlerPosition": [
+                                    -23.658144789985272,
+                                    0,
+                                    976.5141161130721
+                                ],
+                                "nextDensity": 2,
+                                "previousDensity": 2,
+                                "rotateX": 0,
+                                "rotateY": 0,
+                                "rotateZ": 0,
+                                "opacity": 1
+                            },
+                            {
+                                "knotPosition": [
+                                    1439.4323879903445,
+                                    0,
+                                    -26.747963507725444
+                                ],
+                                "nextHandlerPosition": [
+                                    1439.4323879903445,
+                                    0,
+                                    -26.747963507725444
+                                ],
+                                "previousHandlerPosition": [
+                                    1439.4323879903445,
+                                    0,
+                                    -26.747963507725444
+                                ],
+                                "nextDensity": 2,
+                                "previousDensity": 2,
+                                "rotateX": 0,
+                                "rotateY": 0,
+                                "rotateZ": 0,
+                                "opacity": 1
+                            },
+                            {
+                                "knotPosition": [
+                                    49.49638184903142,
+                                    0,
+                                    -956.8555164895063
+                                ],
+                                "nextHandlerPosition": [
+                                    49.49638184903142,
+                                    0,
+                                    -956.8555164895063
+                                ],
+                                "previousHandlerPosition": [
+                                    49.49638184903142,
+                                    0,
+                                    -956.8555164895063
+                                ],
+                                "nextDensity": 3,
+                                "previousDensity": 3,
+                                "rotateX": 0,
+                                "rotateY": 0,
+                                "rotateZ": 0,
+                                "opacity": 1
+                            }
+                        ],
+                        "units": {
+                            "rotateX": "",
+                            "rotateY": "",
+                            "rotateZ": "",
+                            "opacity": ""
+                        },
+                        "headOffset": 0,
+                        "tailOffset": 0
+                    }
+                ],
+                "scrollingTransitionDuration": 500,
+                "scrollingTransitionTimingFunction": "ease",
+                "scrollVectorX": true,
+                "scrollVectorY": true,
+                "selectedIndexScrollingOffset": 5,
+                "slotContent": {"@": "slot"},
+                "stride": "1"
+            }
+        },
+        "image": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "image"},
+                "src": "../../assets/planets/1407794770_Saturn.png"
+            },
+            "bindings": {
+                "src": {"<-": "@flow:iteration.object.img"}
+            }
+        },
+        "preview": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "preview"},
+                "placeholderValue": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@flow.selectedIndexes"}
+            }
+        },
+        "rangeController": {
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "content": [
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794720_Mercury.png",
+                        "name": "Mercury"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794681_Venus.png",
+                        "name": "Venus"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794776_Earth.png",
+                        "name": "Earth"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794757_Mars.png",
+                        "name": "Mars"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794715_Jupiter.png",
+                        "name": "Jupiter"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794770_Saturn.png",
+                        "name": "Mars"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794696_Uranus.png",
+                        "name": "Mars"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794674_Neptune.png",
+                        "name": "Mars"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794782_Pluto.png",
+                        "name": "Mars"
+                    }
+                ]
+            },
+            "bindings": {
+                "selection[0]": {"<-": "content[@flow.scroll]"}
+            }
+        },
+        "selectionOffset": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "selectionOffset"},
+                "value": "3"
+            }
+        },
+        "slot": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "slot"},
+                "crossOrigin": null,
+                "src": "http://deadmb.project.montagestudio.net/assets/planets/1407794726_Sun.png"
+            }
+        },
+        "textField": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textField"},
+                "placeholderValue": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@flow:iteration.object.name"}
             }
         }
+    }
     </script>
 </head>
 <body>
-    <div data-montage-id="main" data-montage-skin="light" class="Main"></div>
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <img data-montage-id="slot">
+        <div>
+            <h1 class="left">
+                LENGHT
+            </h1>
+            <h1 class="left">
+                selectionOffset
+            </h1>
+            <h1 class="left">
+                MODE
+            </h1>
+        </div>
+        <input type="number" data-montage-id="f_length">
+        <input type="number" data-montage-id="selectionOffset">
+        <input type="checkbox" data-montage-id="checkbox">
+        <input data-montage-id="preview" type="text">
+        <div style="position: absolute; top: 100px; left: 0; right: 0; bottom: 0" data-montage-id="flow" class="deep">
+            <img data-montage-id="image">
+            <input data-montage-id="textField" type="text">
+        </div>
+    </div>
 </body>
 </html>
