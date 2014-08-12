@@ -13,6 +13,50 @@
                 "element": {"#": "main"}
             }
         },
+        "actionEventListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "pushData",
+                "handler": {"@": "owner"}
+            }
+        },
+        "actionEventListener2": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "minCam",
+                "handler": {"@": "owner"}
+            }
+        },
+        "button_minus": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button_minus"},
+                "enabled": true,
+                "label": "Min"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "actionEventListener2"}
+                }
+            ]
+        },
+        "button_plus": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button_plus"},
+                "enabled": true,
+                "label": "Max"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "actionEventListener"}
+                }
+            ]
+        },
         "checkbox": {
             "prototype": "digit/ui/checkbox.reel",
             "properties": {
@@ -24,7 +68,7 @@
             "prototype": "digit/ui/number-field.reel",
             "properties": {
                 "element": {"#": "f_length"},
-                "value": "1"
+                "value": "150"
             }
         },
         "flow": {
@@ -33,14 +77,14 @@
                 "element": {"#": "flow"},
                 "cameraFov": 50,
                 "cameraPosition": [
-                    0.6661320714730437,
+                    15.258753369282037,
                     -125.036,
-                    2340.029147171411
+                    2179.508712937897
                 ],
                 "cameraTargetPoint": [
-                    8.943279951493516,
+                    8.943147880020472,
                     -26.8242762765816,
-                    676.6860783331276
+                    676.6859311617168
                 ],
                 "contentController": {"@": "rangeController"},
                 "flowEditorMetadata": {
@@ -56,6 +100,7 @@
                 },
                 "hasElasticScrolling": true,
                 "hasSelectedIndexScrolling": true,
+                "headOffset": 4,
                 "isSelectionEnabled": true,
                 "linearScrollingVector": [
                     -300,
@@ -67,8 +112,8 @@
                         "knots": [
                             {
                                 "previousHandlerPosition": [],
-                                "nextDensity": 5,
-                                "previousDensity": 5,
+                                "nextDensity": 3,
+                                "previousDensity": 3,
                                 "knotPosition": [
                                     -1321.526,
                                     0,
@@ -100,8 +145,8 @@
                                     0,
                                     520.801646573582
                                 ],
-                                "nextDensity": 5,
-                                "previousDensity": 5,
+                                "nextDensity": 3,
+                                "previousDensity": 3,
                                 "rotateX": 0,
                                 "rotateY": 0,
                                 "rotateZ": 0,
@@ -123,8 +168,8 @@
                                     0,
                                     -29.833885540276242
                                 ],
-                                "nextDensity": 5,
-                                "previousDensity": 5,
+                                "nextDensity": 3,
+                                "previousDensity": 3,
                                 "rotateX": 0,
                                 "rotateY": 0,
                                 "rotateZ": 0,
@@ -141,31 +186,28 @@
                         "tailOffset": 0
                     }
                 ],
-                "headOffset": 4,
                 "scrollingMode": "linear",
                 "scrollingTransitionDuration": 500,
                 "scrollingTransitionTimingFunction": "ease",
                 "scrollVectorX": true,
                 "scrollVectorY": true,
                 "selectedIndexes": [
-                    0,
-                    0
+                    5
                 ],
                 "selectedIndexScrollingOffset": 0,
                 "slotContent": {"@": "slot"},
                 "stride": "1"
-            },
-            "bindings": {
-                "lenght": {"<-": "@f_length.value"}
             }
         },
         "image": {
             "prototype": "digit/ui/image.reel",
             "properties": {
                 "element": {"#": "image"},
+                "crossOrigin": null,
                 "src": "../../assets/planets/1407794770_Saturn.png"
             },
             "bindings": {
+                "element.id": {"<-": "@flow:iteration.object.name"},
                 "src": {"<-": "@flow:iteration.object.img"}
             }
         },
@@ -174,27 +216,12 @@
             "properties": {
                 "element": {"#": "preview"},
                 "placeholderValue": "Text"
-            },
-            "bindings": {
-                "value": {"<-": "@flow.selectedIndexes"}
             }
         },
         "rangeController": {
             "prototype": "montage/core/range-controller",
             "properties": {
                 "content": [
-                    {
-                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
-                        "name": "x"
-                    },
-                    {
-                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
-                        "name": "x"
-                    },
-                    {
-                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
-                        "name": "x"
-                    },
                     {
                         "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794720_Mercury.png",
                         "name": "Mercury"
@@ -217,31 +244,19 @@
                     },
                     {
                         "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794770_Saturn.png",
-                        "name": "Mars"
+                        "name": "Saturn"
                     },
                     {
                         "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794696_Uranus.png",
-                        "name": "Mars"
+                        "name": "Uranus"
                     },
                     {
                         "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794674_Neptune.png",
-                        "name": "Mars"
+                        "name": "Neptune"
                     },
                     {
                         "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794782_Pluto.png",
-                        "name": "Mars"
-                    },
-                    {
-                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
-                        "name": "x"
-                    },
-                    {
-                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
-                        "name": "x"
-                    },
-                    {
-                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
-                        "name": "x"
+                        "name": "Pluto"
                     }
                 ]
             },
@@ -273,6 +288,16 @@
             "bindings": {
                 "value": {"<-": "@flow:iteration.object.name"}
             }
+        },
+        "title": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Title"
+            },
+            "bindings": {
+                "value": {"<-": "@flow.cameraPosition"}
+            }
         }
     }
     </script>
@@ -281,21 +306,15 @@
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <img data-montage-id="slot">
         <div>
-            <h1 class="left">
-                LENGHT
-            </h1>
-            <h1 class="left">
-                selectionOffset
-            </h1>
-            <h1 class="left">
-                MODE
-            </h1>
+            <h1 data-montage-id="title"></h1>
         </div>
         <input type="number" data-montage-id="f_length">
         <input type="number" data-montage-id="selectionOffset">
         <input type="checkbox" data-montage-id="checkbox">
         <input data-montage-id="preview" type="text">
-        <div style="position: absolute; top: 100px; left: 0; right: 0; bottom: 0" data-montage-id="flow" class="deep">
+        <button data-montage-id="button_plus"></button>
+        <button data-montage-id="button_minus"></button>
+        <div style="position: absolute; top: 100px; height: 500px; left: 0; right: 0; bottom: 0" data-montage-id="flow" class="deep">
             <img data-montage-id="image">
             <input data-montage-id="textField" type="text">
         </div>
