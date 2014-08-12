@@ -33,14 +33,14 @@
                 "element": {"#": "flow"},
                 "cameraFov": 50,
                 "cameraPosition": [
-                    -26.448,
-                    -266.46674762649354,
-                    2579.949105207698
+                    0.6661320714730437,
+                    -125.036,
+                    2340.029147171411
                 ],
                 "cameraTargetPoint": [
-                    -13.999867219917085,
-                    -107.12503900301272,
-                    1135.5491269690406
+                    8.943279951493516,
+                    -26.8242762765816,
+                    676.6860783331276
                 ],
                 "contentController": {"@": "rangeController"},
                 "flowEditorMetadata": {
@@ -48,58 +48,60 @@
                     "shapes": [
                         {
                             "type": "FlowSpline",
-                            "name": "Spline 3",
+                            "name": "Spline 1",
                             "pathIndex": 0,
-                            "id": 176
+                            "id": 89
                         }
                     ]
                 },
+                "hasElasticScrolling": true,
                 "hasSelectedIndexScrolling": false,
                 "isSelectionEnabled": true,
                 "linearScrollingVector": [
                     -300,
                     0
                 ],
+                "momentumDuration": "300",
                 "paths": [
                     {
                         "knots": [
                             {
                                 "previousHandlerPosition": [],
-                                "nextDensity": 2,
-                                "previousDensity": 2,
+                                "nextDensity": 5,
+                                "previousDensity": 5,
                                 "knotPosition": [
-                                    -13.207498127268536,
+                                    -1321.526,
                                     0,
-                                    -946.4048698267896
+                                    -29.834
                                 ],
                                 "rotateX": 0,
                                 "rotateY": 0,
                                 "rotateZ": 0,
                                 "opacity": 1,
                                 "nextHandlerPosition": [
-                                    -13.207498127268536,
+                                    -1321.526,
                                     0,
-                                    -946.4048698267896
+                                    -29.834
                                 ]
                             },
                             {
                                 "knotPosition": [
-                                    -1706.2122574873642,
+                                    -2.2952014924385367,
                                     0,
-                                    -26.747963507725444
+                                    532.2732201592873
                                 ],
                                 "nextHandlerPosition": [
-                                    -1706.2122574873642,
+                                    640.1129193070628,
                                     0,
-                                    -26.747963507725444
+                                    543.7447937449926
                                 ],
                                 "previousHandlerPosition": [
-                                    -1706.2122574873642,
+                                    -644.7033222919399,
                                     0,
-                                    -26.747963507725444
+                                    520.801646573582
                                 ],
-                                "nextDensity": 2,
-                                "previousDensity": 2,
+                                "nextDensity": 5,
+                                "previousDensity": 5,
                                 "rotateX": 0,
                                 "rotateY": 0,
                                 "rotateZ": 0,
@@ -107,68 +109,22 @@
                             },
                             {
                                 "knotPosition": [
-                                    -23.658144789985272,
+                                    1167.8053042495103,
                                     0,
-                                    976.5141161130721
+                                    -29.833885540276242
                                 ],
                                 "nextHandlerPosition": [
-                                    -23.658144789985272,
+                                    1167.8053042495103,
                                     0,
-                                    976.5141161130721
+                                    -29.833885540276242
                                 ],
                                 "previousHandlerPosition": [
-                                    -23.658144789985272,
+                                    1167.8053042495103,
                                     0,
-                                    976.5141161130721
+                                    -29.833885540276242
                                 ],
-                                "nextDensity": 2,
-                                "previousDensity": 2,
-                                "rotateX": 0,
-                                "rotateY": 0,
-                                "rotateZ": 0,
-                                "opacity": 1
-                            },
-                            {
-                                "knotPosition": [
-                                    1439.4323879903445,
-                                    0,
-                                    -26.747963507725444
-                                ],
-                                "nextHandlerPosition": [
-                                    1439.4323879903445,
-                                    0,
-                                    -26.747963507725444
-                                ],
-                                "previousHandlerPosition": [
-                                    1439.4323879903445,
-                                    0,
-                                    -26.747963507725444
-                                ],
-                                "nextDensity": 2,
-                                "previousDensity": 2,
-                                "rotateX": 0,
-                                "rotateY": 0,
-                                "rotateZ": 0,
-                                "opacity": 1
-                            },
-                            {
-                                "knotPosition": [
-                                    49.49638184903142,
-                                    0,
-                                    -956.8555164895063
-                                ],
-                                "nextHandlerPosition": [
-                                    49.49638184903142,
-                                    0,
-                                    -956.8555164895063
-                                ],
-                                "previousHandlerPosition": [
-                                    49.49638184903142,
-                                    0,
-                                    -956.8555164895063
-                                ],
-                                "nextDensity": 3,
-                                "previousDensity": 3,
+                                "nextDensity": 5,
+                                "previousDensity": 5,
                                 "rotateX": 0,
                                 "rotateY": 0,
                                 "rotateZ": 0,
@@ -185,13 +141,20 @@
                         "tailOffset": 0
                     }
                 ],
+                "scrollingMode": "linear",
                 "scrollingTransitionDuration": 500,
                 "scrollingTransitionTimingFunction": "ease",
                 "scrollVectorX": true,
                 "scrollVectorY": true,
-                "selectedIndexScrollingOffset": 5,
+                "selectedIndexes": [
+                    0,
+                    0
+                ],
                 "slotContent": {"@": "slot"},
                 "stride": "1"
+            },
+            "bindings": {
+                "lenght": {"<-": "@f_length.value"}
             }
         },
         "image": {
@@ -218,6 +181,18 @@
             "prototype": "montage/core/range-controller",
             "properties": {
                 "content": [
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
+                        "name": "x"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
+                        "name": "x"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
+                        "name": "x"
+                    },
                     {
                         "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794720_Mercury.png",
                         "name": "Mercury"
@@ -253,6 +228,18 @@
                     {
                         "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794782_Pluto.png",
                         "name": "Mars"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
+                        "name": "x"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
+                        "name": "x"
+                    },
+                    {
+                        "img": "http://deadmb.project.montagestudio.net/assets/planets/1407794732_Eris.png",
+                        "name": "x"
                     }
                 ]
             },
