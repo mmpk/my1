@@ -23,6 +23,10 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     onScrolling: {
         value: function(v){
             console.log(v);
+            if(v > 3){
+                 var r = this.templateObjects.RangeController;
+                r.content = r.content + r.content;
+            }
         }
     },
     pushData: {
