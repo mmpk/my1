@@ -18,8 +18,12 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value:function (){
             var flow = this.templateObjects.flow;
             var r = this.templateObjects.rangeController;
+            var s = true;
             flow.addBeforeOwnPropertyChangeListener("scroll", function(v){
-                 r.content = r.content.concat(r.content)
+                if(v > 3 && s){   
+                    s = false;
+                     r.content = r.content.concat(r.content)
+                }
             }) 
         }        
     },
