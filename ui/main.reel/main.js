@@ -14,6 +14,17 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             this.super();
         }
     },
+    templateDidLoad:  {
+        value:function (){
+            var flow = this.templateObjects.flow;
+            flow.addBeforeOwnPropertyChangeListener("scroll", onScrolling) 
+        }        
+    },
+    onScrolling: {
+        value: function(v){
+            console.log(v);
+        }
+    },
     pushData: {
         value: function (v) {
             var flow = this.templateObjects.flow; 
@@ -35,7 +46,6 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             {
                 i++; 
                 if(i > 200)  clearInterval(minusInt);
-                console.log(i);
                 flow.cameraPosition = [flow.cameraPosition[0], flow.cameraPosition[1], flow.cameraPosition[2]+5]; 
             }
             var minusInt=setInterval(interval,5);
