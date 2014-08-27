@@ -24,7 +24,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function(v){
             console.log(v);
             if(v > 3){
-                 var r = this.templateObjects.RangeController;
+                 var r = this.templateObjects.rangeController;
                 r.content = r.content + r.content;
             }
         }
