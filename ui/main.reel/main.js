@@ -23,8 +23,8 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     onScrolling: {
         value: function(v){
             console.log(v);
+            var r = this.templateObjects.rangeController;
             if(v > 3){
-                 var r = this.templateObjects.rangeController;
                 r.content = r.content + r.content;
             }
         }
