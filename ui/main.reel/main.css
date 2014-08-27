@@ -1,7 +1,7 @@
 .Main {}
 .deep { background: url('../../assets/deep_space.jpg'); }
 .left { float: left; }
-.selected { }
+.selected { width: 200px; }
 /*
 #Mercury { width: 100px; }
 #Venus { width: 500px; }

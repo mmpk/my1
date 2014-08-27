@@ -78,13 +78,13 @@
                 "cameraFov": 50,
                 "cameraPosition": [
                     15.259,
-                    -68.46021487058078,
-                    1545.0035735204988
+                    -68.46,
+                    1545.004
                 ],
                 "cameraTargetPoint": [
                     8.943394510738436,
-                    -46.15008213203225,
-                    -539.3371218014943
+                    -46.14986726145146,
+                    -539.3366953219931
                 ],
                 "contentController": {"@": "rangeController"},
                 "flowEditorMetadata": {
@@ -112,11 +112,11 @@
                         "knots": [
                             {
                                 "previousHandlerPosition": [],
-                                "nextDensity": 3,
-                                "previousDensity": 3,
+                                "nextDensity": 2,
+                                "previousDensity": 2,
                                 "knotPosition": [
-                                    -18.190313124478052,
-                                    377.08259450147807,
+                                    -18.19061843884515,
+                                    377.0825704001803,
                                     0
                                 ],
                                 "rotateX": 0,
@@ -124,25 +124,25 @@
                                 "rotateZ": 0,
                                 "opacity": 1,
                                 "nextHandlerPosition": [
-                                    -18.190313124478052,
-                                    377.08259450147807,
+                                    -18.191007420686756,
+                                    377.083,
                                     0
                                 ]
                             },
                             {
                                 "knotPosition": [
-                                    -517.3501978077911,
-                                    -5.390563892229238,
+                                    -517.351,
+                                    -5.391,
                                     0
                                 ],
                                 "nextHandlerPosition": [
-                                    -530.3153896177473,
-                                    -206.35103694655004,
+                                    -530.3161918099562,
+                                    -206.3514730543208,
                                     0
                                 ],
                                 "previousHandlerPosition": [
-                                    -504.3850059978349,
-                                    195.56990916209156,
+                                    -504.3858081900438,
+                                    195.5694730543208,
                                     0
                                 ],
                                 "nextDensity": 3,
@@ -154,18 +154,41 @@
                             },
                             {
                                 "knotPosition": [
-                                    -18.190313124478052,
-                                    -517.5156403854984,
+                                    -8.723684777567541,
+                                    -517.5156644867961,
                                     0
                                 ],
                                 "nextHandlerPosition": [
-                                    474.4869756538569,
-                                    -504.5504485755422,
+                                    483.9536040007674,
+                                    -504.55047267683995,
                                     0
                                 ],
                                 "previousHandlerPosition": [
-                                    -510.867601902813,
-                                    -530.4808321954546,
+                                    -501.4009735559025,
+                                    -530.4808562967523,
+                                    0
+                                ],
+                                "nextDensity": 2,
+                                "previousDensity": 2,
+                                "rotateX": 0,
+                                "rotateY": 0,
+                                "rotateZ": 0,
+                                "opacity": 1
+                            },
+                            {
+                                "knotPosition": [
+                                    487.451862149446,
+                                    -11.87318389850509,
+                                    0
+                                ],
+                                "nextHandlerPosition": [
+                                    474.4866703394898,
+                                    189.0872891558157,
+                                    0
+                                ],
+                                "previousHandlerPosition": [
+                                    500.4170539594022,
+                                    -212.8336569528259,
                                     0
                                 ],
                                 "nextDensity": 3,
@@ -177,45 +200,22 @@
                             },
                             {
                                 "knotPosition": [
-                                    487.4521674638131,
-                                    -11.873159797207336,
+                                    33.670148800979405,
+                                    357.634782685246,
                                     0
                                 ],
                                 "nextHandlerPosition": [
-                                    474.4869756538569,
-                                    189.08731325711346,
+                                    33.670148800979405,
+                                    357.634782685246,
                                     0
                                 ],
                                 "previousHandlerPosition": [
-                                    500.4173592737693,
-                                    -212.83363285152814,
+                                    33.670148800979405,
+                                    357.634782685246,
                                     0
                                 ],
-                                "nextDensity": 10,
-                                "previousDensity": 10,
-                                "rotateX": 0,
-                                "rotateY": 0,
-                                "rotateZ": 0,
-                                "opacity": 1
-                            },
-                            {
-                                "knotPosition": [
-                                    33.6704541153465,
-                                    357.6348067865438,
-                                    0
-                                ],
-                                "nextHandlerPosition": [
-                                    33.6704541153465,
-                                    357.6348067865438,
-                                    0
-                                ],
-                                "previousHandlerPosition": [
-                                    33.6704541153465,
-                                    357.6348067865438,
-                                    0
-                                ],
-                                "nextDensity": 10,
-                                "previousDensity": 10,
+                                "nextDensity": 2,
+                                "previousDensity": 2,
                                 "rotateX": 0,
                                 "rotateY": 0,
                                 "rotateZ": 0,
@@ -228,7 +228,7 @@
                             "rotateZ": "",
                             "opacity": ""
                         },
-                        "headOffset": 0,
+                        "headOffset": 5,
                         "tailOffset": 0
                     }
                 ],
@@ -240,7 +240,7 @@
                 "selectedIndexes": [
                     5
                 ],
-                "selectedIndexScrollingOffset": 0,
+                "selectedIndexScrollingOffset": 5,
                 "slotContent": {"@": "slot"},
                 "stride": "1"
             }
@@ -261,7 +261,10 @@
             "prototype": "digit/ui/text-field.reel",
             "properties": {
                 "element": {"#": "preview"},
-                "placeholderValue": "Text"
+                "placeholderValue": "idx"
+            },
+            "bindings": {
+                "value": {"<-": "@rangeController.selection.0.name"}
             }
         },
         "rangeController": {
@@ -315,6 +318,9 @@
             "properties": {
                 "element": {"#": "selectionOffset"},
                 "value": "3"
+            },
+            "bindings": {
+                "value": {"<-": "@flow.scroll"}
             }
         },
         "slot": {
