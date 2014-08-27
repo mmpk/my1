@@ -19,7 +19,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             var flow = this.templateObjects.flow;
             var r = this.templateObjects.rangeController;
             flow.addBeforeOwnPropertyChangeListener("scroll", function(v){
-             console.log(r.content);
+                 r.content = r.content + r.content;
             }) 
         }        
     },
