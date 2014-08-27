@@ -21,10 +21,10 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         }        
     },
     onScrolling: {
-        value: function(){
+        value: function(v){
             console.log(this.content);
             if(v > 3){
-                r.content = r.content + r.content;
+                this.content = this.content + this.content;
             }
         }
     },
